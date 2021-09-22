@@ -27,8 +27,10 @@ export default function form() {
   const getData = async () => {
     try {    
       const jsonValue = await AsyncStorage.getItem('UnitConverter-State')  
-      const data = jsonValue != null ? JSON.parse(jsonValue) : null;
-      dispatch({type:"setData",payload:data})
+      if(jsonValue){
+        const data = jsonValue != null ? JSON.parse(jsonValue) : null;
+        dispatch({type:"setData",payload:data})
+      } 
     } catch(e) { console.error("Error reading value:",e)}
   }
   
