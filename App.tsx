@@ -2,7 +2,7 @@
  * @format
  */
 
-import React,{useEffect,useContext} from 'react';
+import React from 'react';
 import {
   ScrollView,
   StatusBar,
