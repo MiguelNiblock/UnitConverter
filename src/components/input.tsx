@@ -8,7 +8,7 @@ import { Input } from 'react-native-elements';
 import {weightLabelType, heightLabelType, fieldnameType} from "../types"
 import {UnitContext} from "../context/unitContext"
 
-type propsType = {
+export type propsType = {
   fieldname:fieldnameType
   label:weightLabelType | heightLabelType
   amount: string

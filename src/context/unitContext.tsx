@@ -1,9 +1,9 @@
 import React, { createContext, useReducer, Dispatch } from 'react';
 import {stateType,actionType} from "../types"
 
-const defaultValue = "0"
+export const defaultValue = "0"
 
-const initialState: stateType = {
+export const initialState: stateType = {
   unitName: "Imperial",
   unitButtonIndex: 0,
   weightLabel: "lbs",
@@ -21,7 +21,6 @@ const UnitContext = createContext<{
 });
 
 const reducer = (state:stateType, action:actionType) => {
-  console.log('reducer invoked')
   switch (action.type){
 
     case "Imperial":{

@@ -14,7 +14,7 @@ module.exports = {
     },
   },
   clearMocks: true,
-  // setupFilesAfterEnv: ['./jest.setup.js'],
+  setupFilesAfterEnv: ["@testing-library/jest-native/extend-expect"],
   setupFiles: ['./jestSetupFile.js'],
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/node_modules/**'],
 };
